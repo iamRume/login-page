@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =========== GLOBAL DECLARATION ============= */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --container-size : 85%;
+
+    --large-screen-size : 1440px;
+    --small-screen-size : 375px;
+
+    --color-primary-bg : hsl(0, 100%, 74%);
+    --color-primary-green : hsl(154, 59%, 51%);
+
+    --color-accent-blue : hsl(248, 32%, 49%);
+    --color-neutral-blue : hsl(249, 10%, 26%);
+    --color-neutral-grayish : hsl(246, 25%, 77%);
+
+    --color-primary : white;
+
+
+    --font-size-default : 16px;
+    --page-font : Poppins;
+
+
+}
+
+body {
+    background: var(--color-primary-bg);
+    background-image: url(./images/bg-intro-desktop.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    font-family: var(--page-font);
+    color: var(--color-primary);
+}
+
+br {
+    display: none;
+}
+
+h3 {
+    font-size: 3rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    width: var(--container-size);
+    margin: 0 auto;
+}
+
+.grid__layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin: 5rem 0;
+}
+
+.grid__left {
+    margin-top: 10rem;
+}
+
+
+/* =========== GRID RIGHT ============= */
+
+.grid__right {
+ position: relative;
+ width: 100%;
+
+}
+
+.grid__info {
+    text-align: center;
+    background: var(--color-accent-blue);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 5px 0px  hsla(0, 0%, 0%, 0.222);
+}
+
+
+.grid__info p {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.grid__info p span {
+    font-weight: normal;
+}
+
+.grid__form {
+    background: var(--color-primary);
+    padding: 2.4rem 1.8rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 5px 0px  hsla(0, 0%, 0%, 0.222);
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 1.2rem;
+    outline: var(--color-accent-blue );
+    font-weight: 600;
+}
+
+.btn {
+    text-align: center;
+    color: var(--color-primary);
+    padding: 1rem;
+    border-radius : 5px;
+    font-weight: 600;
+    background: gray;
+    cursor: pointer;
+    box-shadow: 1px 3px 2px 0px  hsl(150, 100%, 25%);
+}
+
+.btn-success {
+    background: var(--color-primary-green);
+}
+
+small {
+    color: rgb(190, 190, 190);
+    font-size: 0.6rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+small span {
+    color: red;
+}
+input:focus {
+	outline: none;
+  	border: 1px solid purple;
+}
+
+
+/* =========== MEDIA  QUERIES SMALL SCREEN ============= */
+
+@media only screen and (max-width: 475px){
+    body {
+        background-image: url('./images/bg-intro-mobile.png');
+
+    }
+
+    .grid__layout {
+        grid-template-columns:  1fr;
+    }
+
+    br {
+        display: block;
+    }
+
+    .grid__left {
+        margin: 0;
+    }
+}
+
+
+
